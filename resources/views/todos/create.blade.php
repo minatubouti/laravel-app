@@ -13,7 +13,7 @@
             担当者の名前：<input type="text" name="assign_person_name">
         </p>
         <p>
-            見積時間(h)：<input type="number" name="estimate_hour">
+            見積時間(h):<input type="number" name="estimate_hour">
         </p>
         <input type="submit" name="create" value="追加">
     </form>
