@@ -1,0 +1,1 @@
+Route::get('/', 'TodolistFormController@index');
