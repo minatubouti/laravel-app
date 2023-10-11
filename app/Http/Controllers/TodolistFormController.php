@@ -12,7 +12,6 @@ class TodolistFormController extends Controller
         return view('todos.create');  // create.blade.phpのビューを返す
     }
 
-    // createメソッドをcreatePageメソッドの外側に移動
     public function create(Request $request)
     {
         $todo = new Todo;
@@ -24,4 +23,5 @@ class TodolistFormController extends Controller
 
         return redirect('home'); // 保存後にトップページにリダイレクト
     }
+    
 }

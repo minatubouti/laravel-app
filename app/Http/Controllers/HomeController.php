@@ -22,9 +22,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $todos = Todo::orderBy('id', 'asc')->get();
-        return view('home', ['todos' => $todos]);  // ビューに$todosを渡す
+        $query = $request->input('query');
+    
+        // queryが存在すれば検索処理を行い、存在しなければ全件取得
+        if($query){
+            $todos = Todo::where('task_name', 'LIKE', "%{$query}%")->orderBy('id', 'asc')->get();
+        } else {
+            $todos = Todo::orderBy('id', 'asc')->get();
+        }
+    
+        return view('home', compact('todos'));
     }
 }
