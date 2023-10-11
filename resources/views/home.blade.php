@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -14,10 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    <h3>Your Tasks</h3>
+                    <h3 class="mb-4">Your Tasks</h3>
+
                     <a href="/create-page" class="btn btn-primary mb-3">タスクを追加</a>
-                    <table border="1">
+
+                    <!-- Bootstrap Table Design -->
+                    <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>タスクの名前</th>
@@ -37,7 +39,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
