@@ -23,7 +23,7 @@
                         </div>
                     @endif
 
-                    <h3 class="mb-4">タスクの一覧</h3>
+                    <h3 class="mb-4">ToDo list</h3>
 
                     <a href="/create-page" class="btn btn-primary mb-3">タスクを追加</a>
 
@@ -45,7 +45,7 @@
                                 <td>{{ $todo->assign_person_name }}</td>
                                 <td>{{ $todo->estimate_hour }}</td>
                                 <td>
-                                    <a href="/edit-page/{{ $todo->id }}" class="btn btn-info">編集</a>
+                                    <a href="/edit-page/{{ $todo->id }}" class="btn btn-success">編集</a>
                                     
                                     <!-- タスク削除のためのフォーム -->
                                     <form action="/delete/{{ $todo->id }}" method="POST" style="display: inline;">
