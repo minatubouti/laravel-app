@@ -18,7 +18,8 @@ Route::post('/create', 'TodolistFormController@create');
 Route::get('/edit-page/{id}', 'TodolistFormController@editPage');
 Route::post('/edit', 'TodolistFormController@edit');
 Route::get('/delete-page/{id}', 'TodolistFormController@deletePage');
-Route::post('/delete/{id}', 'TodolistFormController@delete');
+Route::delete('/delete/{id}', 'TodolistFormController@delete');
+
 
 
 
