@@ -29,6 +29,9 @@ class HomeController extends Controller
         // queryが存在すれば検索処理を行い、存在しなければ全件取得
         if($query){
             $todos = Todo::where('task_name', 'LIKE', "%{$query}%")->orderBy('id', 'asc')->get();
+            $variable = "Hello, world!";
+dd($variable);
+
         } else {
             $todos = Todo::orderBy('id', 'asc')->get();
         }

@@ -11,21 +11,24 @@
 |
 */
 
-Route::get('/home', 'HomeController@index');
-Route::get('/', 'TodolistFormController@index');
+// Route::get('/home', 'HomeController@index');
+// Route::get('/', 'TodolistFormController@index');
+Route::get('/search', 'HomeController@search')->name('search');
 Route::get('/create-page', 'TodolistFormController@createPage');
 Route::post('/create', 'TodolistFormController@create');
 Route::get('/edit-page/{id}', 'TodolistFormController@editPage');
 Route::post('/edit', 'TodolistFormController@edit');
 Route::get('/delete-page/{id}', 'TodolistFormController@deletePage');
 Route::delete('/delete/{id}', 'TodolistFormController@delete');
+Route::get('/search', 'HomeController@search')->name('search');
 
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
